@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>期末final</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王柏翔的個人空間</title>
+</head>
+<body>
+    <div id="bg"></div>
+
+    <div id="content">
+        <div id="header-content">
+            <img src="https://img.hypesphere.com/2015-10-22-174039-60.jpg" alt="header-image">
+            <h1>王柏翔的個人空間</h1>
+        </div>
+
+        <button id="introBtn">開始介紹我</button>
+        
+        <div id="menu" style="display: none;">
+            <ul>
+                <li><a href="#education-section">學歷</a></li>
+                <li><a href="#hobby-section">興趣</a></li>
+                <li><a href="#contact-section">聯絡我</a></li>
+            </ul>
+        </div>
+
+        <div id="education-section" style="display: none;">
+            <h2>學歷</h2>
+            <p>我是王柏翔，目前就讀嘉義大學數位系。</p>
+        </div>
+
+        <div id="hobby-section" style="display: none;">
+            <h2>興趣</h2>
+            <p>我喜歡看動漫和打遊戲，是我生活中的樂趣！</p>
+        </div>
+
+        <div id="contact-section" style="display: none;">
+            <h2>聯絡我</h2>
+            <p>電子郵件：brianwang9533@gmail.com</p>
+            <p>透過我的電子郵件或社群平台找到我！</p>
+        </div>
+
+        <div id="message-board" style="display: none;">
+            <h2>留言區</h2>
+            <form id="message-form">
+                <textarea id="message-content" placeholder="留下你的留言..." rows="4" cols="50"></textarea><br><br>
+                <button type="submit">送出留言</button>
+            </form>
+            <div id="messages"></div>
+        </div>
+    </div>
+
+    <script>
+        const introBtn = document.getElementById("introBtn");
+        const menu = document.getElementById("menu");
+        const sections = document.querySelectorAll("#education-section, #hobby-section, #contact-section");
+        const messageBoard = document.getElementById("message-board");
+        const messageForm = document.getElementById("message-form");
+        const messageContent = document.getElementById("message-content");
+        const messagesDiv = document.getElementById("messages");
+
+        introBtn.addEventListener("click", () => {
+            menu.style.display = "block";
+            sections.forEach(section => {
+                section.style.display = "block";
+            });
+
+            introBtn.textContent = "已展示介紹！";
+            introBtn.disabled = true;
+
+            messageBoard.style.display = "block"; 
+        });
+
+        messageForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const message = messageContent.value.trim();
+            if (message) {
+                const messageElement = document.createElement("p");
+                messageElement.textContent = message;
+                messagesDiv.appendChild(messageElement);
+                messageContent.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

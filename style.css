@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #f0c27b, #4b1248);
+    z-index: -1;
+    background-size: cover;
+}
+
+#header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#header-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#header-content h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#content {
+    margin: 100px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#introBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#introBtn:hover {
+    background-color: #0056b3;
+}
+
+#menu {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    margin: 10px 0;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#menu ul li a:hover {
+    text-decoration: underline;
+}
+
+#education-section, #hobby-section, #contact-section, #message-board {
+    margin-top: 30px;
+}
+
+#education-section h2, 
+#hobby-section h2, 
+#contact-section h2,
+#message-board h2 {
+    color: #007BFF;
+    font-size: 36px;
+}
+
+#education-section p, 
+#hobby-section p, 
+#contact-section p {
+    font-size: 24px;
+}
+
+#message-form textarea {
+    font-size: 18px;
+    width: 80%;
+    margin: 10px 0;
+}
+
+#messages p {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
